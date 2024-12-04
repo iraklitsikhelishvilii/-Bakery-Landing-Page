@@ -8,9 +8,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Document</title>
   </head>
-  <body>
+  <body id="body">
     <header>
       <div class="header_container">
         <img class="header_main_img" src="./images/shapes.svg" />
@@ -23,6 +27,9 @@
               <p class="header_p">Recipes</p>
             </div>
           </div>
+          <button class="menu_button">
+            <img src="./images/menu.svg" alt="menu" />
+          </button>
           <button class="header_btn">Contact</button>
         </div>
         <div class="header_contant">
@@ -50,9 +57,9 @@
             <img class="header_contant_img5" src="./images/Shape2.svg" />
           </div>
         </div>
-        <div class="header_arrow_box">
+        <button class="header_arrow_box">
           <img src="./images/down.svg" alt="down_arrow" />
-        </div>
+        </button>
       </div>
     </header>
     <section>
@@ -97,15 +104,15 @@
             </div>
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide"><p>01</p></div>
-                <div class="swiper-slide"><p>02</p></div>
-                <div class="swiper-slide"><p>03</p></div>
-                <div class="swiper-slide"><p>04</p></div>
-                <div class="swiper-slide"><p>05</p></div>
-                <div class="swiper-slide"><p>06</p></div>
-                <div class="swiper-slide"><p>08</p></div>
-                <div class="swiper-slide"><p>09</p></div>
-                <div class="swiper-slide"><p>10</p></div>
+                <div class="swiper-slide"><p class="about_us_box_p">01</p></div>
+                <div class="swiper-slide"><p class="about_us_box_p">02</p></div>
+                <div class="swiper-slide"><p class="about_us_box_p">03</p></div>
+                <div class="swiper-slide"><p class="about_us_box_p">04</p></div>
+                <div class="swiper-slide"><p class="about_us_box_p">05</p></div>
+                <div class="swiper-slide"><p class="about_us_box_p">06</p></div>
+                <div class="swiper-slide"><p class="about_us_box_p">08</p></div>
+                <div class="swiper-slide"><p class="about_us_box_p">09</p></div>
+                <div class="swiper-slide"><p class="about_us_box_p">10</p></div>
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -117,33 +124,52 @@
         <h2>Baked With Love</h2>
       </div>
       <div class="description_main_box">
-        <div class="description_box">
+        <div id="description_box1" class="description_box">
+          <img
+            id="description_box_img1"
+            class="description_box_img"
+            src="./images/Bitmapbox.svg"
+            alt=""
+          />
           <img class="description_img" src="./images/fresh.svg" />
           <div class="description_box_contant">
             <h3>Fresh</h3>
             <p class="description_box_p">
-              Nothing the copy said could convince <br />
+              Nothing the copy said could convince <br class="br_desktop" />
               her and so it didn’t take long.
             </p>
           </div>
         </div>
-        <div class="description_box">
+        <div id="description_box2" class="description_box">
+          <img
+            id="description_box_img2"
+            class="description_box_img"
+            src="./images/Bitmapbox.svg"
+            alt=""
+          />
           <img class="description_img" src="./images/natural.svg" />
           <div class="description_box_contant">
             <h3>Natural</h3>
             <p class="description_box_p">
-              Copy Writers ambushed her, made her <br />
+              Copy Writers ambushed her, made her <br class="br_desktop" />
               drunk with Longe and Parole.
             </p>
           </div>
         </div>
-        <div class="description_box">
+        <div id="description_box3" class="description_box">
+          <img
+            id="description_box_img3"
+            class="description_box_img"
+            src="./images/Bitmapbox.svg"
+            alt=""
+          />
           <img class="description_img" src="./images/tasty.svg" />
           <div class="description_box_contant">
             <h3>Tasty</h3>
             <p class="description_box_p">
-              And if she hasn’t been rewritten, then <br />
-              they are still using her.
+              And if she hasn’t been rewritten, then <br class="br_desktop" />
+              they <br class="br_tablet" />
+              are still using her.
             </p>
           </div>
         </div>
@@ -155,7 +181,7 @@
           <div class="video_container_contant">
             <div class="play_button_box">
               <img class="video_img" src="./images/Combined Shapevideo.svg" />
-              <button class="play_btn">
+              <button id="play_btn" class="play_btn">
                 <img src="./images/play.svg" alt="" />
               </button>
             </div>
