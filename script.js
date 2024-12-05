@@ -6,6 +6,10 @@ var swiper = new Swiper(".mySwiper", {
   },
   loop: true,
 });
+var swiper1 = new Swiper(".mySwiper1", {
+  effect: "cards",
+  grabCursor: true,
+});
 
 let next = document.getElementById("next");
 next.addEventListener("click", () => {
