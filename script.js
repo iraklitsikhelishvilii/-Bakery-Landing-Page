@@ -98,3 +98,38 @@ let header_btn = document.getElementById("header_btn");
 header_btn.addEventListener("click", () => {
   window.location.href = "tel:+995558900800";
 });
+
+let menu_button = document.getElementById("menu_button");
+let burger_menu = document.getElementById("burger_menu");
+let p1 = document.createElement("p");
+p1.textContent = "About";
+p1.classList.add("header_p", "burger_menu_p");
+let p2 = document.createElement("p");
+p2.textContent = "Products";
+p2.classList.add("header_p", "burger_menu_p");
+let p3 = document.createElement("p");
+p3.textContent = "Recipes";
+p3.classList.add("header_p", "burger_menu_p");
+let contact_btn = document.createElement("button");
+contact_btn.classList.add("contact_btn");
+contact_btn.textContent = "Contact";
+menu_button.addEventListener("click", () => {
+  burger_menu.classList.toggle("burger_menu_extended");
+
+  if (burger_menu.classList.contains("burger_menu_extended")) {
+    burger_menu.style.height = "240px";
+    burger_menu.appendChild(p1);
+    burger_menu.appendChild(p2);
+    burger_menu.appendChild(p3);
+    burger_menu.appendChild(contact_btn);
+  } else {
+    burger_menu.style.height = "0px";
+    burger_menu.removeChild(p1);
+    burger_menu.removeChild(p2);
+    burger_menu.removeChild(p3);
+    burger_menu.removeChild(contact_btn);
+  }
+});
+contact_btn.addEventListener("click", () => {
+  window.location.href = "tel:+995558900800";
+});
