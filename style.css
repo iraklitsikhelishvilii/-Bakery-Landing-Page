@@ -480,9 +480,24 @@ h4 {
 .section_specialmoments_img_box_mobile {
   display: none;
 }
+.br_desktop2 {
+  display: flex;
+}
 @media (max-width: 1100px) {
+  body {
+    overflow-y: auto;
+  }
+  header {
+    height: auto;
+  }
   .header_arrow_box {
     padding-top: 50px;
+  }
+  header {
+    height: auto;
+  }
+  body {
+    overflow-y: auto;
   }
   .header_container {
     max-width: 1000px;
@@ -494,6 +509,7 @@ h4 {
     display: none;
   }
   .header_contant {
+    padding-top: 100px;
     max-width: 850px;
     flex-direction: column;
     gap: 80px;
@@ -649,6 +665,7 @@ h4 {
     display: none;
   }
   .header_contant {
+    padding-top: 25px;
     max-width: 330px;
     flex-direction: column-reverse;
     gap: 0px;
@@ -699,7 +716,7 @@ h4 {
     display: block;
   }
   .swiper.mySwiper1 {
-    width: 290px;
+    width: 300px;
     height: 416px;
   }
   .swiper_box {
@@ -728,6 +745,9 @@ h4 {
   .close_btn {
     top: 0px;
     right: 0px;
+  }
+  .br_desktop2 {
+    display: none;
   }
 }
 @media (max-width: 660px) {
