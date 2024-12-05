@@ -481,6 +481,12 @@ h4 {
   display: none;
 }
 @media (max-width: 1100px) {
+  body {
+    overflow-y: auto;
+  }
+  header {
+    height: auto;
+  }
   .header_arrow_box {
     padding-top: 50px;
   }
@@ -699,7 +705,7 @@ h4 {
     display: block;
   }
   .swiper.mySwiper1 {
-    width: 290px;
+    width: 300px;
     height: 416px;
   }
   .swiper_box {
@@ -728,6 +734,9 @@ h4 {
   .close_btn {
     top: 0px;
     right: 0px;
+  }
+  .br_desktop2 {
+    display: none;
   }
 }
 @media (max-width: 660px) {
