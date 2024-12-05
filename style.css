@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: all 1s ease-in-out;
+  /* transition: all 1s ease-in-out; */
 }
 body {
   overflow-y: hidden;
@@ -574,7 +574,8 @@ h4 {
     background-color: rgba(255, 255, 255, 0.1);
     margin-bottom: 20px;
   }
-
+  .swiper-wrapper {
+  }
   .swiper.mySwiper1 .swiper-slide {
     display: flex;
     align-items: center;
@@ -716,8 +717,8 @@ h4 {
     display: block;
   }
   .swiper.mySwiper1 {
-    width: 300px;
-    height: 416px;
+    width: 260px;
+    height: 350px;
   }
   .swiper_box {
     padding-left: 25px;
@@ -748,6 +749,9 @@ h4 {
   }
   .br_desktop2 {
     display: none;
+  }
+  .description_box_p {
+    font-size: 15px;
   }
 }
 @media (max-width: 660px) {
