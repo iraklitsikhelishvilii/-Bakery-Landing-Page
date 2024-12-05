@@ -76,3 +76,25 @@ play_btn.addEventListener("click", () => {
     body.style.overflow = "auto";
   });
 });
+let header_arrow_box = document.getElementById("header_arrow_box");
+let header_contant = document.getElementById("header_contant");
+let header = document.getElementById("header");
+header_arrow_box.addEventListener("click", () => {
+  window.scrollBy({
+    top: 1000,
+    behavior: "smooth",
+  });
+  header.style.height = "auto";
+  body.style.overflowY = "auto";
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1100) {
+      header_contant.style.paddingTop = "185px";
+    } else if (window.innerWidth <= 1100 && window.innerWidth > 870) {
+      header_contant.style.paddingTop = "100px";
+    } else if (window.innerWidth <= 870 && window.innerWidth > 650) {
+      header_contant.style.paddingTop = "50px"; 
+    } else if (window.innerWidth <= 650) {
+      header_contant.style.paddingTop = "25px";
+    }
+  });
+});

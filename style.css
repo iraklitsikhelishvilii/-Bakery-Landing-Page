@@ -8,6 +8,7 @@
   transition: all 1s ease-in-out;
 }
 body {
+  overflow-y: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +17,7 @@ body {
   overflow-x: hidden;
 }
 header {
+  height: 100vh;
   width: 100%;
   background-color: #171b1b;
   display: flex;
@@ -87,7 +89,6 @@ header {
   font-weight: 400;
 }
 .header_contant {
-  padding-top: 185px;
   max-width: 1170px;
   width: 100%;
   display: flex;
@@ -496,7 +497,6 @@ h4 {
     max-width: 850px;
     flex-direction: column;
     gap: 80px;
-    padding-top: 100px;
     justify-content: center;
     align-items: center;
   }
@@ -527,6 +527,14 @@ h4 {
   }
   .br_tablet {
     display: flex;
+  }
+  .video {
+    height: 400px;
+    width: 700px;
+  }
+  .video_box {
+    height: 400px;
+    width: 700px;
   }
 }
 @media (max-width: 870px) {
@@ -599,6 +607,14 @@ h4 {
   .about_us_box_p {
     text-align: center;
   }
+  .video {
+    height: 300px;
+    width: 500px;
+  }
+  .video_box {
+    height: auto;
+    width: auto;
+  }
 }
 @media (max-width: 650px) {
   .header_arrow_box {
@@ -636,7 +652,6 @@ h4 {
     max-width: 330px;
     flex-direction: column-reverse;
     gap: 0px;
-    padding-top: 25px;
     justify-content: center;
     align-items: center;
   }
@@ -701,6 +716,18 @@ h4 {
   }
   .br_tablet {
     display: none;
+  }
+  .video {
+    height: 100vh;
+    width: 100%;
+    border-radius: 0%;
+  }
+  .video_box {
+    border-radius: none;
+  }
+  .close_btn {
+    top: 0px;
+    right: 0px;
   }
 }
 @media (max-width: 660px) {
