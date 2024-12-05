@@ -480,6 +480,9 @@ h4 {
 .section_specialmoments_img_box_mobile {
   display: none;
 }
+.br_desktop2 {
+  display: flex;
+}
 @media (max-width: 1100px) {
   body {
     overflow-y: auto;
@@ -489,6 +492,12 @@ h4 {
   }
   .header_arrow_box {
     padding-top: 50px;
+  }
+  header {
+    height: auto;
+  }
+  body {
+    overflow-y: auto;
   }
   .header_container {
     max-width: 1000px;
@@ -500,6 +509,7 @@ h4 {
     display: none;
   }
   .header_contant {
+    padding-top: 100px;
     max-width: 850px;
     flex-direction: column;
     gap: 80px;
@@ -655,6 +665,7 @@ h4 {
     display: none;
   }
   .header_contant {
+    padding-top: 25px;
     max-width: 330px;
     flex-direction: column-reverse;
     gap: 0px;
