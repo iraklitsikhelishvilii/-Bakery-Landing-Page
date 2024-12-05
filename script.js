@@ -6,6 +6,7 @@ var swiper = new Swiper(".mySwiper", {
   },
   loop: true,
 });
+
 var swiper1 = new Swiper(".mySwiper1", {
   effect: "cards",
   grabCursor: true,
@@ -19,6 +20,7 @@ let previous = document.getElementById("previous");
 previous.addEventListener("click", () => {
   swiper.slidePrev();
 });
+
 let description_box1 = document.getElementById("description_box1");
 let description_box2 = document.getElementById("description_box2");
 let description_box3 = document.getElementById("description_box3");
@@ -47,6 +49,7 @@ description_box3.addEventListener("mouseleave", () => {
   description_box3.classList.remove("description_box_dark");
   description_box_img3.style.display = "none";
 });
+
 let play_btn = document.getElementById("play_btn");
 let body = document.getElementById("body");
 play_btn.addEventListener("click", () => {
@@ -76,6 +79,7 @@ play_btn.addEventListener("click", () => {
     body.style.overflow = "auto";
   });
 });
+
 let header_arrow_box = document.getElementById("header_arrow_box");
 let header_contant = document.getElementById("header_contant");
 let header = document.getElementById("header");
@@ -86,15 +90,11 @@ header_arrow_box.addEventListener("click", () => {
   });
   header.style.height = "auto";
   body.style.overflowY = "auto";
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 1100) {
-      header_contant.style.paddingTop = "185px";
-    } else if (window.innerWidth <= 1100 && window.innerWidth > 870) {
-      header_contant.style.paddingTop = "100px";
-    } else if (window.innerWidth <= 870 && window.innerWidth > 650) {
-      header_contant.style.paddingTop = "50px"; 
-    } else if (window.innerWidth <= 650) {
-      header_contant.style.paddingTop = "25px";
-    }
-  });
+  header_arrow_box.style.paddingTop = "50px";
+  header_contant.style.paddingTop = "185px";
+});
+
+let header_btn = document.getElementById("header_btn");
+header_btn.addEventListener("click", () => {
+  window.location.href = "tel:+995558900800";
 });
