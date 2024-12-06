@@ -5,7 +5,6 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
   loop: true,
-  allowTouchMove: false,
 });
 
 var swiper1 = new Swiper(".mySwiper1", {
