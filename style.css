@@ -303,7 +303,7 @@ h2 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 200px;
+  padding-top: 0px;
   gap: 18px;
 }
 .description_main_box {
@@ -852,6 +852,9 @@ h4 {
   .about_us_slider_box {
     gap: 35px;
     height: 760px;
+  }
+  .features_heading_box {
+    padding-top: 100px;
   }
 }
 @media (max-width: 660px) {
