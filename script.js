@@ -80,9 +80,6 @@ play_btn.addEventListener("click", () => {
   });
 });
 
-let header_arrow_box = document.getElementById("header_arrow_box");
-let header_contant = document.getElementById("header_contant");
-let header = document.getElementById("header");
 header_arrow_box.addEventListener("click", () => {
   window.scrollBy({
     top: 1000,
@@ -90,8 +87,13 @@ header_arrow_box.addEventListener("click", () => {
   });
   header.style.height = "auto";
   body.style.overflowY = "auto";
-  header_arrow_box.style.paddingTop = "50px";
-  header_contant.style.paddingTop = "185px";
+  if (window.innerWidth <= 650) {
+    header_arrow_box.style.paddingTop = "25px";
+    header_contant.style.paddingTop = "25px";
+  } else {
+    header_arrow_box.style.paddingTop = "50px";
+    header_contant.style.paddingTop = "185px";
+  }
 });
 
 let header_btn = document.getElementById("header_btn");
@@ -133,3 +135,76 @@ menu_button.addEventListener("click", () => {
 contact_btn.addEventListener("click", () => {
   window.location.href = "tel:+995558900800";
 });
+
+let about_us_box_p_heading = document.getElementById("about_us_box_p_heading");
+let about_us_box_p_about = document.getElementById("about_us_box_p_about");
+let about_us_box_p_bottom1 = document.getElementById("about_us_box_p_bottom1");
+let about_us_box_p_bottom2 = document.getElementById("about_us_box_p_bottom2");
+let about_us_box_p_bottom3 = document.getElementById("about_us_box_p_bottom3");
+let about_us_box_p_heading2 = document.getElementById(
+  "about_us_box_p_heading2"
+);
+let about_us_box_p_about2 = document.getElementById("about_us_box_p_about2");
+let about_us_box_p_bottom1_2 = document.getElementById(
+  "about_us_box_p_bottom1_2"
+);
+let about_us_box_p_bottom2_2 = document.getElementById(
+  "about_us_box_p_bottom2_2"
+);
+let about_us_box_p_bottom3_2 = document.getElementById(
+  "about_us_box_p_bottom3_2"
+);
+let about_us_box_p_heading3 = document.getElementById(
+  "about_us_box_p_heading3"
+);
+let about_us_box_p_about3 = document.getElementById("about_us_box_p_about3");
+let about_us_box_p_bottom1_3 = document.getElementById(
+  "about_us_box_p_bottom1_3"
+);
+let about_us_box_p_bottom2_3 = document.getElementById(
+  "about_us_box_p_bottom2_3"
+);
+let about_us_box_p_bottom3_3 = document.getElementById(
+  "about_us_box_p_bottom3_3"
+);
+let about_us_box_p_heading4 = document.getElementById(
+  "about_us_box_p_heading4"
+);
+let about_us_box_p_about4 = document.getElementById("about_us_box_p_about4");
+let about_us_box_p_bottom1_4 = document.getElementById(
+  "about_us_box_p_bottom1_4"
+);
+let about_us_box_p_bottom2_4 = document.getElementById(
+  "about_us_box_p_bottom2_4"
+);
+let about_us_box_p_bottom3_4 = document.getElementById(
+  "about_us_box_p_bottom3_4"
+);
+async function GetProducts() {
+  try {
+    let Data = await fetch("https://fakestoreapi.com/products");
+    let Products = await Data.json();
+    console.log(Products);
+    about_us_box_p_heading.textContent = Products[0].title;
+    about_us_box_p_about.textContent = Products[0].description;
+    about_us_box_p_bottom1.textContent = Products[0].rating.rate;
+    about_us_box_p_bottom2.textContent = Products[0].price;
+    about_us_box_p_bottom3.textContent = Products[0].category;
+    about_us_box_p_heading2.textContent = Products[1].title;
+    about_us_box_p_about2.textContent = Products[1].description;
+    about_us_box_p_bottom1_2.textContent = Products[1].rating.rate;
+    about_us_box_p_bottom2_2.textContent = Products[1].price;
+    about_us_box_p_bottom3_2.textContent = Products[1].category;
+    about_us_box_p_heading3.textContent = Products[2].title;
+    about_us_box_p_about3.textContent = Products[2].description;
+    about_us_box_p_bottom1_3.textContent = Products[2].rating.rate;
+    about_us_box_p_bottom2_3.textContent = Products[2].price;
+    about_us_box_p_bottom3_3.textContent = Products[2].category;
+    about_us_box_p_heading4.textContent = Products[3].title;
+    about_us_box_p_about4.textContent = Products[3].description;
+    about_us_box_p_bottom1_4.textContent = Products[3].rating.rate;
+    about_us_box_p_bottom2_4.textContent = Products[3].price;
+    about_us_box_p_bottom3_4.textContent = Products[3].category;
+  } catch (error) {}
+}
+GetProducts();
