@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: all 1s ease-in-out;
+  /* transition: all 1s ease-in-out; */
 }
 body {
   overflow-y: hidden;
@@ -262,7 +262,7 @@ h2 {
   font-family: "Ultra", serif;
 }
 .about_us_slider_box {
-  height: 355px;
+  height: 575px;
   padding-top: 60px;
   display: flex;
   justify-content: center;
@@ -276,18 +276,13 @@ h2 {
 }
 
 .swiper-slide {
+  max-width: 370px;
   font-size: 18px;
   background: #f5d3ab;
   display: flex;
   justify-content: center;
+  align-items: start;
 }
-
-/* .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
 .swiper_btn_box {
   display: flex;
   flex-direction: column;
@@ -520,6 +515,34 @@ h4 {
   gap: 10px;
   padding-top: 45px;
 }
+.about_us_box_p_about {
+  color: rgba(51, 51, 51, 0.5);
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  padding-top: 22px;
+}
+.about_us_box_p2 {
+  text-align: start;
+}
+.about_us_box_p_heading {
+  color: #171b1b;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  padding-top: 12px;
+}
+.about_us_box_p_bottom {
+  font-family: "DM Sans", sans-serif;
+  color: #171b1b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  padding-top: 20px;
+}
 @media (max-width: 1100px) {
   body {
     overflow-y: auto;
@@ -588,6 +611,9 @@ h4 {
   .video_box {
     height: 400px;
     width: 700px;
+  }
+  .about_us_box_p2 {
+    text-align: start;
   }
 }
 @media (max-width: 870px) {
@@ -667,6 +693,9 @@ h4 {
   .video_box {
     height: auto;
     width: auto;
+  }
+  .about_us_box_p2 {
+    text-align: start;
   }
 }
 @media (max-width: 650px) {
@@ -774,6 +803,23 @@ h4 {
   }
   .section_specialmoments_img_box_mobile {
     display: flex;
+    position: relative;
+  }
+  .section_specialmoments_img1_mobile {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    width: 234px;
+    height: 194px;
+    top: 0px;
+    left: 0px;
+  }
+  .section_specialmoments_img3_mobile {
+    position: absolute;
+    width: 254px;
+    height: 254px;
+    bottom: 31px;
+    left: 44px;
   }
   .br_tablet {
     display: none;
@@ -799,6 +845,13 @@ h4 {
   .burger_menu_box {
     display: flex;
     flex-direction: column;
+  }
+  .about_us_box_p2 {
+    text-align: start;
+  }
+  .about_us_slider_box {
+    gap: 35px;
+    height: 760px;
   }
 }
 @media (max-width: 660px) {
