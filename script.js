@@ -120,10 +120,12 @@ menu_button.addEventListener("click", () => {
 
   if (burger_menu.classList.contains("burger_menu_extended")) {
     burger_menu.style.height = "240px";
-    burger_menu.appendChild(p1);
-    burger_menu.appendChild(p2);
-    burger_menu.appendChild(p3);
-    burger_menu.appendChild(contact_btn);
+    setTimeout(() => {
+      burger_menu.appendChild(p1);
+      burger_menu.appendChild(p2);
+      burger_menu.appendChild(p3);
+      burger_menu.appendChild(contact_btn);
+    }, 1000);
   } else {
     burger_menu.style.height = "0px";
     burger_menu.removeChild(p1);
