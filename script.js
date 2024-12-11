@@ -103,15 +103,20 @@ header_btn.addEventListener("click", () => {
 
 let menu_button = document.getElementById("menu_button");
 let burger_menu = document.getElementById("burger_menu");
-let p1 = document.createElement("p");
+let p1 = document.createElement("a");
 p1.textContent = "About";
 p1.classList.add("header_p", "burger_menu_p");
-let p2 = document.createElement("p");
+p1.href = "https://en.wikipedia.org/wiki/Bakery";
+p1.target = "_blank";
+let p2 = document.createElement("a");
 p2.textContent = "Products";
 p2.classList.add("header_p", "burger_menu_p");
-let p3 = document.createElement("p");
+p2.href = "./menu.page/menu.html";
+let p3 = document.createElement("a");
 p3.textContent = "Recipes";
 p3.classList.add("header_p", "burger_menu_p");
+p3.href = "https://sallysbakingaddiction.com/";
+p3.target = "_blank";
 let contact_btn = document.createElement("button");
 contact_btn.classList.add("contact_btn");
 contact_btn.textContent = "Contact";
