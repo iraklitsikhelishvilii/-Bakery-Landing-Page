@@ -115,6 +115,7 @@ header {
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
+  position: relative;
 }
 .header_contant_about {
   display: flex;
@@ -380,6 +381,7 @@ h3 {
   padding-bottom: 160px;
   padding-left: 10px;
   padding-right: 10px;
+  position: relative;
 }
 .video_about {
   display: flex;
@@ -545,6 +547,37 @@ h4 {
   line-height: 32px;
   padding-top: 20px;
 }
+.appare_img {
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+  transition: 1.5s ease-in-out;
+}
+.donate_img_box {
+  position: absolute;
+  top: 15px;
+  left: 150px;
+  cursor: pointer;
+}
+#donate_img_box2 {
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+  cursor: pointer;
+}
+#donate_img_box3 {
+  position: absolute;
+  bottom: 0px;
+  left: -95px;
+  cursor: pointer;
+}
+#donate_img_box4 {
+  position: absolute;
+  top: 0px;
+  right: -70px;
+  cursor: pointer;
+}
+
 @media (max-width: 1100px) {
   body {
     overflow-y: auto;
@@ -617,6 +650,18 @@ h4 {
   .about_us_box_p2 {
     text-align: start;
   }
+  .donate_img_box {
+    display: none;
+  }
+  #donate_img_box2 {
+    display: none;
+  }
+  #donate_img_box3 {
+    display: none;
+  }
+  #donate_img_box4 {
+    display: none;
+  }
 }
 @media (max-width: 870px) {
   .video_shape_2 {
@@ -639,7 +684,7 @@ h4 {
     background-color: rgba(255, 255, 255, 0.1);
     margin-bottom: 20px;
   }
- 
+
   .swiper.mySwiper1 .swiper-slide {
     display: flex;
     align-items: center;
@@ -705,7 +750,7 @@ h4 {
     position: absolute;
     width: 100px;
     height: 0px;
-    right: 0px
+    right: 0px;
   }
   .header_arrow_box {
     padding-top: 50px;
