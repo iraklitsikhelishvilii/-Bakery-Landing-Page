@@ -1,7 +1,6 @@
 var swiper = new Swiper(".mySwiper", {
   direction: "vertical",
   pagination: {
-    el: ".swiper-pagination",
     clickable: true,
   },
   loop: true,
@@ -192,26 +191,36 @@ async function GetProducts() {
     let Data = await fetch("https://fakestoreapi.com/products");
     let Products = await Data.json();
     console.log(Products);
-    about_us_box_p_heading.textContent = Products[0].title;
-    about_us_box_p_about.textContent = Products[0].description;
-    about_us_box_p_bottom1.textContent = Products[0].rating.rate;
-    about_us_box_p_bottom2.textContent = Products[0].price;
-    about_us_box_p_bottom3.textContent = Products[0].category;
-    about_us_box_p_heading2.textContent = Products[1].title;
-    about_us_box_p_about2.textContent = Products[1].description;
-    about_us_box_p_bottom1_2.textContent = Products[1].rating.rate;
-    about_us_box_p_bottom2_2.textContent = Products[1].price;
-    about_us_box_p_bottom3_2.textContent = Products[1].category;
-    about_us_box_p_heading3.textContent = Products[2].title;
-    about_us_box_p_about3.textContent = Products[2].description;
-    about_us_box_p_bottom1_3.textContent = Products[2].rating.rate;
-    about_us_box_p_bottom2_3.textContent = Products[2].price;
-    about_us_box_p_bottom3_3.textContent = Products[2].category;
-    about_us_box_p_heading4.textContent = Products[3].title;
-    about_us_box_p_about4.textContent = Products[3].description;
-    about_us_box_p_bottom1_4.textContent = Products[3].rating.rate;
-    about_us_box_p_bottom2_4.textContent = Products[3].price;
-    about_us_box_p_bottom3_4.textContent = Products[3].category;
-  } catch (error) {}
+    for (let index = 0; index < 4; index++) {
+      const product = Products[index];
+      if (index === 0) {
+        about_us_box_p_heading.textContent = product.title;
+        about_us_box_p_about.textContent = product.description;
+        about_us_box_p_bottom1.textContent = product.rating.rate;
+        about_us_box_p_bottom2.textContent = product.price;
+        about_us_box_p_bottom3.textContent = product.category;
+      } else if (index === 1) {
+        about_us_box_p_heading2.textContent = product.title;
+        about_us_box_p_about2.textContent = product.description;
+        about_us_box_p_bottom1_2.textContent = product.rating.rate;
+        about_us_box_p_bottom2_2.textContent = product.price;
+        about_us_box_p_bottom3_2.textContent = product.category;
+      } else if (index === 2) {
+        about_us_box_p_heading3.textContent = product.title;
+        about_us_box_p_about3.textContent = product.description;
+        about_us_box_p_bottom1_3.textContent = product.rating.rate;
+        about_us_box_p_bottom2_3.textContent = product.price;
+        about_us_box_p_bottom3_3.textContent = product.category;
+      } else if (index === 3) {
+        about_us_box_p_heading4.textContent = product.title;
+        about_us_box_p_about4.textContent = product.description;
+        about_us_box_p_bottom1_4.textContent = product.rating.rate;
+        about_us_box_p_bottom2_4.textContent = product.price;
+        about_us_box_p_bottom3_4.textContent = product.category;
+      }
+    }
+  } catch (error) {
+    console.log("error");
+  }
 }
 GetProducts();
