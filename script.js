@@ -205,6 +205,63 @@ async function GetProducts() {
     about_us_box_p_bottom1_4.textContent = Products[3].rating.rate;
     about_us_box_p_bottom2_4.textContent = Products[3].price;
     about_us_box_p_bottom3_4.textContent = Products[3].category;
-  } catch (error) {}
+  } catch (error) { }
 }
 GetProducts();
+let showMore = document.getElementById("show-more");
+let hiddenDivFirst = document.querySelector(".hidden-div-first");
+let hiddenDivSecond = document.querySelector(".hidden-div-sec");
+let clickCount = 0;
+let copys = document.querySelectorAll(".copy");
+showMore.addEventListener("click", () => {
+  clickCount++;
+  if (clickCount === 1) {
+    hiddenDivFirst.style.display = "flex";
+  } else if (clickCount === 2) {
+    hiddenDivSecond.style.display = "flex";
+    showMore.textContent = "Show Less";
+  } else if (clickCount === 3) {
+    hiddenDivSecond.style.display = "none";
+    showMore.textContent = "Show Less";
+  } else {
+    hiddenDivFirst.style.display = "none";
+    showMore.textContent = "Show More"
+    clickCount = 0;
+  }
+});
+let showMoreSecond = document.getElementById("show-more-second");
+let hiddenDivThird = document.querySelector(".third-container-hidden-div");
+let clickCountSecond = 0;
+showMoreSecond.addEventListener("click", () => {
+  clickCountSecond++;
+  if (clickCountSecond % 2 === 1) {
+    hiddenDivThird.style.display = "flex";
+    showMoreSecond.textContent = "Show Less"
+  } else {
+    hiddenDivThird.style.display = "none";
+    showMoreSecond.textContent = "Show More"
+    clickCountSecond = 0;
+  }
+
+})
+copys.forEach(copy => {
+  copy.addEventListener("mouseenter", () => {
+    let bitmapImg = copy.querySelector(".bitmap-img");
+    if (bitmapImg) {
+      bitmapImg.style.display = "flex";
+    }
+    copy.style.width = "302px";
+    copy.style.height = "416px";
+    copy.style.backgroundColor = "rgba(158, 173, 141, 1)";
+  });
+  copy.addEventListener("mouseleave", () => {
+    bitmapImg = copy.querySelector(".bitmap-img");
+    if (bitmapImg) {
+      bitmapImg.style.display = "none";
+    }
+    copy.style.width = "284px";
+    copy.style.height = "384px";
+    copy.style.backgroundColor = "white";
+  });
+});
+
