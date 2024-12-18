@@ -9,7 +9,28 @@ var swiper = new Swiper(".mySwiper", {
 var swiper1 = new Swiper(".mySwiper1", {
   effect: "cards",
   grabCursor: true,
+  on: {
+    slideChange: function () {
+      UpdateSlideColors();
+    },
+  },
 });
+
+let swiper_slide_bold = document.getElementsByClassName("swiper_slide_bold");
+
+function UpdateSlideColors() {
+  for (let i = 0; i < swiper_slide_bold.length; i++) {
+    let zIndex = window.getComputedStyle(swiper_slide_bold[i]).zIndex;
+
+    if (zIndex === "3") {
+      swiper_slide_bold[i].style.backgroundColor = "#9EAD8D";
+      swiper_slide_bold[i].style.height = "416px";
+    } else {
+      swiper_slide_bold[i].style.backgroundColor = "white";
+      swiper_slide_bold[i].style.height = "384px";
+    }
+  }
+}
 
 let next = document.getElementById("next");
 next.addEventListener("click", () => {
