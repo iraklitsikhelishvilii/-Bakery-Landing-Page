@@ -1,402 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <title>Document</title>
-  </head>
-  <body id="body">
-    <header id="header">
-      <div class="header_container">
-        <img class="header_main_img" src="./images/shapes.svg" />
-        <div class="header_top_box">
-          <div class="header_top_right_box">
-            <a href="index.html" class="header_top_right_box_p">BKR</a>
-            <div class="header_about_box">
-              <a
-                target="_blank"
-                href="https://en.wikipedia.org/wiki/Bakery"
-                class="header_p"
-                >About</a
-              >
-              <a href="./menu.page/menu.html" class="header_p">Products</a>
-              <a
-                href="https://sallysbakingaddiction.com/"
-                target="_blank"
-                class="header_p"
-                >Recipes</a
-              >
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Document</title>
+</head>
+
+<body id="body">
+  <header id="header">
+    <div class="header_container">
+      <img class="header_main_img" src="./images/shapes.svg" />
+      <div class="header_top_box">
+        <div class="header_top_right_box">
+          <a href="index.html" class="header_top_right_box_p">BKR</a>
+          <div class="header_about_box">
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Bakery" class="header_p">About</a>
+            <a href="./menu.page/menu.html" class="header_p">Products</a>
+            <a href="https://sallysbakingaddiction.com/" target="_blank" class="header_p">Recipes</a>
           </div>
-          <div class="burger_menu_box">
-            <button id="menu_button" class="menu_button">
-              <img src="./images/menu.svg" alt="menu" />
+        </div>
+        <div class="burger_menu_box">
+          <button id="menu_button" class="menu_button">
+            <img src="./images/menu.svg" alt="menu" />
+          </button>
+          <div id="burger_menu" class="burger_menu"></div>
+        </div>
+        <button id="header_btn" class="header_btn">Contact</button>
+      </div>
+      <div id="header_contant" class="header_contant">
+        <div class="header_contant_about">
+          <p class="header_contant_about_p">Sience 1984</p>
+          <h1>
+            Fresh <br />
+            Bakery <br />
+            Every Day
+          </h1>
+          <p id="header_contant_about_p2" class="header_p">
+            Even the all-powerful Pointing has <br class="br_mobile" />
+            no control <br class="br_desktop2" />
+            about the blind texts it <br class="br_mobile" />
+            is an almost.
+          </p>
+        </div>
+        <img class="header_img_mobile" src="./images/Bitmapmobile.svg" />
+        <div class="header_contant_img_box">
+          <img class="header_contant_img1" src="./images/Shape.svg" />
+          <img class="header_contant_img2" src="./images/Combined Shape.svg" />
+          <img class="header_contant_img3" src="./images/Bitmap.svg" />
+          <div class="oval_img"></div>
+          <img class="header_contant_img4" src="./images/Bitmap1.svg" />
+          <img class="header_contant_img5" src="./images/Shape2.svg" />
+        </div>
+      </div>
+      <button id="header_arrow_box" class="header_arrow_box">
+        <img src="./images/down.svg" alt="down_arrow" />
+      </button>
+    </div>
+  </header>
+  <section>
+    <div class="section_specialmoments_box">
+      <div class="section_specialmoments_img_box_mobile">
+        <img class="section_specialmoments_img1_mobile" src="./images/bakery1.jpg" alt="bakery" />
+        <img class="section_specialmoments_img3_mobile" src="./images/bakery2.avif" alt="" />
+        <img section_specialmoments_img_box_mobile src="./images/Bitmapmobilesection.svg" alt="" />
+      </div>
+      <div class="section_specialmoments_img_box">
+        <img class="section_specialmoments_img1" src="./images/bakery1.jpg" alt="bakery" />
+        <img class="section_specialmoments_img2" src="./images/Shape3.svg" alt="" />
+        <img class="section_specialmoments_img3" src="./images/bakery2.avif" alt="" />
+        <img class="section_specialmoments_img4" src="./images/Combined Shape2.svg" />
+      </div>
+      <div class="section_specialmoments_box_contant">
+        <div class="about_us_box">
+          <p class="about_us_box_p">About Us</p>
+          <h2>
+            Baking Special <br />
+            Moments
+          </h2>
+        </div>
+        <div class="about_us_slider_box">
+          <div class="swiper_btn_box">
+            <button class="swiper_btn" id="previous">
+              <img src="./images/up.svg" />
             </button>
-            <div id="burger_menu" class="burger_menu"></div>
+            <button class="swiper_btn" id="next">
+              <img src="./images/down2.svg" />
+            </button>
           </div>
-          <button id="header_btn" class="header_btn">Contact</button>
-        </div>
-        <div id="header_contant" class="header_contant">
-          <div class="header_contant_about">
-            <p class="header_contant_about_p">Sience 1984</p>
-            <h1>
-              Fresh <br />
-              Bakery <br />
-              Every Day
-            </h1>
-            <p id="header_contant_about_p2" class="header_p">
-              Even the all-powerful Pointing has <br class="br_mobile" />
-              no control <br class="br_desktop2" />
-              about the blind texts it <br class="br_mobile" />
-              is an almost.
-            </p>
-          </div>
-          <img class="header_img_mobile" src="./images/Bitmapmobile.svg" />
-          <div class="header_contant_img_box">
-            <img class="header_contant_img1" src="./images/Shape.svg" />
-            <img
-              class="header_contant_img2"
-              src="./images/Combined Shape.svg"
-            />
-            <img class="header_contant_img3" src="./images/Bitmap.svg" />
-            <div class="oval_img"></div>
-            <img class="header_contant_img4" src="./images/Bitmap1.svg" />
-            <img class="header_contant_img5" src="./images/Shape2.svg" />
-          </div>
-        </div>
-        <button id="header_arrow_box" class="header_arrow_box">
-          <img src="./images/down.svg" alt="down_arrow" />
-        </button>
-      </div>
-    </header>
-    <section>
-      <div class="section_specialmoments_box">
-        <div class="section_specialmoments_img_box_mobile">
-          <img
-            class="section_specialmoments_img1_mobile"
-            src="./images/bakery1.jpg"
-            alt="bakery"
-          />
-          <img
-            class="section_specialmoments_img3_mobile"
-            src="./images/bakery2.avif"
-            alt=""
-          />
-          <img
-            section_specialmoments_img_box_mobile
-            src="./images/Bitmapmobilesection.svg"
-            alt=""
-          />
-        </div>
-        <div class="section_specialmoments_img_box">
-          <img
-            class="section_specialmoments_img1"
-            src="./images/bakery1.jpg"
-            alt="bakery"
-          />
-          <img
-            class="section_specialmoments_img2"
-            src="./images/Shape3.svg"
-            alt=""
-          />
-          <img
-            class="section_specialmoments_img3"
-            src="./images/bakery2.avif"
-            alt=""
-          />
-          <img
-            class="section_specialmoments_img4"
-            src="./images/Combined Shape2.svg"
-          />
-        </div>
-        <div class="section_specialmoments_box_contant">
-          <div class="about_us_box">
-            <p class="about_us_box_p">About Us</p>
-            <h2>
-              Baking Special <br />
-              Moments
-            </h2>
-          </div>
-          <div class="about_us_slider_box">
-            <div class="swiper_btn_box">
-              <button class="swiper_btn" id="previous">
-                <img src="./images/up.svg" />
-              </button>
-              <button class="swiper_btn" id="next">
-                <img src="./images/down2.svg" />
-              </button>
-            </div>
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <p class="about_us_box_p about_us_box_p2">01</p>
-                  <p
-                    id="about_us_box_p_heading"
-                    class="about_us_box_p_heading"
-                  ></p>
-                  <p id="about_us_box_p_about" class="about_us_box_p_about"></p>
-                  <p
-                    id="about_us_box_p_bottom1"
-                    class="about_us_box_p_bottom"
-                  ></p>
-                  <p
-                    id="about_us_box_p_bottom2"
-                    class="about_us_box_p_bottom"
-                  ></p>
-                  <p
-                    id="about_us_box_p_bottom3"
-                    class="about_us_box_p_bottom"
-                  ></p>
-                </div>
-                <div class="swiper-slide">
-                  <p class="about_us_box_p about_us_box_p2">02</p>
-                  <p
-                    id="about_us_box_p_heading2"
-                    class="about_us_box_p_heading"
-                  ></p>
-                  <p
-                    id="about_us_box_p_about2"
-                    class="about_us_box_p_about"
-                  ></p>
-                  <p
-                    id="about_us_box_p_bottom1_2"
-                    class="about_us_box_p_bottom"
-                  ></p>
-                  <p
-                    id="about_us_box_p_bottom2_2"
-                    class="about_us_box_p_bottom"
-                  ></p>
-                  <p
-                    id="about_us_box_p_bottom3_2"
-                    class="about_us_box_p_bottom"
-                  ></p>
-                </div>
-                <div class="swiper-slide">
-                  <p class="about_us_box_p about_us_box_p2">03</p>
-                  <p
-                    id="about_us_box_p_heading3"
-                    class="about_us_box_p_heading"
-                  ></p>
-                  <p
-                    id="about_us_box_p_about3"
-                    class="about_us_box_p_about"
-                  ></p>
-                  <p
-                    id="about_us_box_p_bottom1_3"
-                    class="about_us_box_p_bottom"
-                  ></p>
-                  <p
-                    id="about_us_box_p_bottom2_3"
-                    class="about_us_box_p_bottom"
-                  ></p>
-                  <p
-                    id="about_us_box_p_bottom3_3"
-                    class="about_us_box_p_bottom"
-                  ></p>
-                </div>
-                <div class="swiper-slide">
-                  <p class="about_us_box_p about_us_box_p2">04</p>
-                  <p
-                    id="about_us_box_p_heading4"
-                    class="about_us_box_p_heading"
-                  ></p>
-                  <p
-                    id="about_us_box_p_about4"
-                    class="about_us_box_p_about"
-                  ></p>
-                  <p
-                    id="about_us_box_p_bottom1_4"
-                    class="about_us_box_p_bottom"
-                  ></p>
-                  <p
-                    id="about_us_box_p_bottom2_4"
-                    class="about_us_box_p_bottom"
-                  ></p>
-                  <p
-                    id="about_us_box_p_bottom3_4"
-                    class="about_us_box_p_bottom"
-                  ></p>
-                </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <p class="about_us_box_p about_us_box_p2">01</p>
+                <p id="about_us_box_p_heading" class="about_us_box_p_heading"></p>
+                <p id="about_us_box_p_about" class="about_us_box_p_about"></p>
+                <p id="about_us_box_p_bottom1" class="about_us_box_p_bottom"></p>
+                <p id="about_us_box_p_bottom2" class="about_us_box_p_bottom"></p>
+                <p id="about_us_box_p_bottom3" class="about_us_box_p_bottom"></p>
               </div>
-              <div class="swiper-pagination"></div>
+              <div class="swiper-slide">
+                <p class="about_us_box_p about_us_box_p2">02</p>
+                <p id="about_us_box_p_heading2" class="about_us_box_p_heading"></p>
+                <p id="about_us_box_p_about2" class="about_us_box_p_about"></p>
+                <p id="about_us_box_p_bottom1_2" class="about_us_box_p_bottom"></p>
+                <p id="about_us_box_p_bottom2_2" class="about_us_box_p_bottom"></p>
+                <p id="about_us_box_p_bottom3_2" class="about_us_box_p_bottom"></p>
+              </div>
+              <div class="swiper-slide">
+                <p class="about_us_box_p about_us_box_p2">03</p>
+                <p id="about_us_box_p_heading3" class="about_us_box_p_heading"></p>
+                <p id="about_us_box_p_about3" class="about_us_box_p_about"></p>
+                <p id="about_us_box_p_bottom1_3" class="about_us_box_p_bottom"></p>
+                <p id="about_us_box_p_bottom2_3" class="about_us_box_p_bottom"></p>
+                <p id="about_us_box_p_bottom3_3" class="about_us_box_p_bottom"></p>
+              </div>
+              <div class="swiper-slide">
+                <p class="about_us_box_p about_us_box_p2">04</p>
+                <p id="about_us_box_p_heading4" class="about_us_box_p_heading"></p>
+                <p id="about_us_box_p_about4" class="about_us_box_p_about"></p>
+                <p id="about_us_box_p_bottom1_4" class="about_us_box_p_bottom"></p>
+                <p id="about_us_box_p_bottom2_4" class="about_us_box_p_bottom"></p>
+                <p id="about_us_box_p_bottom3_4" class="about_us_box_p_bottom"></p>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="features_heading_box">
+      <p class="about_us_box_p">Our Features</p>
+      <h2 id="h2_bottom">
+        Baked With <br class="br_mobile" />
+        Love
+      </h2>
+    </div>
+    <div class="swiper2_box">
+      <div class="swiper mySwiper1">
+        <div class="swiper-wrapper">
+          <div id="swiper_slide1" class="swiper-slide swiper_slide_bold">
+            <div class="swiper_box">
+              <img class="description_img" src="./images/fresh.svg" />
+              <div class="description_box_contant">
+                <h3>Fresh</h3>
+                <p class="description_box_p">
+                  Nothing the copy said could convince
+                  <br class="br_desktop" />
+                  her and so it <br class="br_mobile" />
+                  didn’t take long.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="swiper_slide2" class="swiper-slide swiper_slide_bold">
+            <div class="swiper_box">
+              <img class="description_img" src="./images/natural.svg" />
+              <div class="description_box_contant">
+                <h3>Natural</h3>
+                <p class="description_box_p">
+                  Copy Writers ambushed her, made her
+                  <br class="br_desktop" />
+                  drunk with <br class="br_mobile" />
+                  Longe and Parole.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="swiper_slide3" class="swiper-slide swiper_slide_bold">
+            <div class="swiper_box">
+              <img class="description_img" src="./images/tasty.svg" />
+              <div class="description_box_contant">
+                <h3>Tasty</h3>
+                <p class="description_box_p">
+                  And if she hasn’t been <br class="br_mobile" />
+                  rewritten, then
+                  <br class="br_desktop" />
+                  they <br class="br_tablet" />
+                  are <br class="br_mobile" />
+                  still using her.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="features_heading_box">
-        <p class="about_us_box_p">Our Features</p>
-        <h2 id="h2_bottom">
-          Baked With <br class="br_mobile" />
-          Love
-        </h2>
+    </div>
+    <div class="description_main_box">
+      <div id="description_box1" class="description_box">
+        <img id="description_box_img1" class="description_box_img" src="./images/Bitmapbox.svg" alt="" />
+        <img class="description_img" src="./images/fresh.svg" />
+        <div class="description_box_contant">
+          <h3>Fresh</h3>
+          <p class="description_box_p">
+            Nothing the copy said could convince <br class="br_desktop" />
+            her and so it <br class="br_mobile" />
+            didn’t take long.
+          </p>
+        </div>
       </div>
+      <div id="description_box2" class="description_box">
+        <img id="description_box_img2" class="description_box_img" src="./images/Bitmapbox.svg" alt="" />
+        <img class="description_img" src="./images/natural.svg" />
+        <div class="description_box_contant">
+          <h3>Natural</h3>
+          <p class="description_box_p">
+            Copy Writers ambushed her, made her <br class="br_desktop" />
+            drunk with Longe and Parole.
+          </p>
+        </div>
+      </div>
+      <div id="description_box3" class="description_box">
+        <img id="description_box_img3" class="description_box_img" src="./images/Bitmapbox.svg" alt="" />
+        <img class="description_img" src="./images/tasty.svg" />
+        <div class="description_box_contant">
+          <h3>Tasty</h3>
+          <p class="description_box_p">
+            And if she hasn’t been rewritten, then <br class="br_desktop" />
+            they <br class="br_tablet" />
+            are still using her.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="video_container">
+      <div class="video_container_main_box">
+        <img class="video_shape_1" src="./images/Shape4.svg" alt="" />
+        <img class="video_shape_2" src="./images/Shape5.svg" alt="" />
+        <div class="video_container_contant">
+          <div id="donate_img_box" class="donate_img_box">
+            <img id="donate_img" class="appare_img" src="./images/donateresult.png" alt="" />
+          </div>
+          <div id="donate_img_box2">
+            <img id="donate_img2" class="appare_img" src="./images/strawbery.png" alt="" />
+          </div>
+          <div id="donate_img_box3">
+            <img id="donate_img3" class="appare_img" src="./images/cakes.png" alt="" />
+          </div>
+          <div id="donate_img_box4">
+            <img id="donate_img4" class="appare_img" src="./images/cakes2.png" alt="" />
+          </div>
+          <div class="play_button_box">
+            <img class="video_img" src="./images/Combined Shapevideo.svg" />
+            <button id="play_btn" class="play_btn">
+              <img src="./images/play.svg" alt="" />
+            </button>
+          </div>
+          <div class="video_about">
+            <p class="header_contant_about_p">Our Video</p>
+            <h4>
+              Story Behind <br />
+              Every Piece
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main>
+    <div class="container">
+      <div class="title-container">
+        <p class="products">Our Products</p>
+        <h1 class="name">Baked Fresh Every Morning</h1>
+      </div>
+      <div class="added-div">
+        <div class="upper-div">
+          <div class="big-div">
+            <p class="bakery">Bakery</p>
+            <h1 class="type">Homemade Bread</h1>
+            <div class="caption-price-div">
+              <p class="yapping">Flows by their place and supplies it with the necessary regelialia.</p>
+              <h2 class="pricee">$9</h2>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-div"></div>
+            <div class="content">
+              <p class="category">Bakery</p>
+              <div class="price-title-div">
+                <p class="title">Bread</p>
+                <p class="price">5$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="middle-div">
+          <div class="card">
+            <div class="image-div1"></div>
+            <div class="content">
+              <p class="category">Pastry</p>
+              <div class="price-title-div">
+                <p class="title">Cupcake</p>
+                <p class="price">3$</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-div2"></div>
+            <div class="content">
+              <p class="category">Sweet</p>
+              <div class="price-title-div">
+                <p class="title">Biscuits</p>
+                <p class="price">2$</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-div3"></div>
+            <div class="content">
+              <p class="category">Pastry</p>
+              <div class="price-title-div">
+                <p class="title">Brioche</p>
+                <p class="price">5$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden-div-first">
+          <div class="card">
+            <div class="image-div4"></div>
+            <div class="content">
+              <p class="category">Pastry</p>
+              <div class="price-title-div">
+                <p class="title">Crepes</p>
+                <p class="price">7$</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-div5"></div>
+            <div class="content">
+              <p class="category">Bakery</p>
+              <div class="price-title-div">
+                <p class="title">Delicious Bread</p>
+                <p class="price">4$</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-div6"></div>
+            <div class="content">
+              <p class="category">Bakery</p>
+              <div class="price-title-div">
+                <p class="title">Apple Pie</p>
+                <p class="price">11$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden-div-sec">
+          <div class="card">
+            <div class="image-div7"></div>
+            <div class="content">
+              <p class="category">Pastry</p>
+              <div class="price-title-div">
+                <p class="title">Pancakes</p>
+                <p class="price">6$</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-div8"></div>
+            <div class="content">
+              <p class="category">Pastry</p>
+              <div class="price-title-div">
+                <p class="title">French Toast</p>
+                <p class="price">6$</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-div9"></div>
+            <div class="content">
+              <p class="category">Sweet</p>
+              <div class="price-title-div">
+                <p class="title">Strawberry Pie</p>
+                <p class="price">14$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="show-more">Show More</button>
+    </div>
+    <div class="second-container">
+      <div class="title-container-second">
+        <p class="our-process">Our Process</p>
+        <h1 class="how-we-work">How We Work</h1>
+      </div>
+      <div class="about-us-div">
+        <div class="copy">
+          <img src="./images/bitmap-nikosi.svg" class="bitmap-img">
+          <p class="card-number">01</p>
+          <div class="lower-part">
+            <h2 class="copy-category">Contact</h2>
+            <p class="copy-caption">Nothing the copy said could convince her and so it didn’t take long.</p>
+          </div>
+        </div>
+        <div class="copy">
+          <img src="./images/bitmap-nikosi.svg" class="bitmap-img">
+          <p class="card-number">02</p>
+          <div class="lower-part">
+            <h2 class="copy-category">Baking</h2>
+            <p class="copy-caption">The copy said could convince her and so it didn’t take long.</p>
+          </div>
+        </div>
+        <div class="copy">
+          <img src="./images/bitmap-nikosi.svg" class="bitmap-img">
+          <p class="card-number">03</p>
+          <div class="lower-part">
+            <h2 class="copy-category">Delivery</h2>
+            <p class="copy-caption">Nothing the copy said could convince her and so it didn’t take.</p>
+          </div>
+        </div>
+        <div class="copy">
+          <img src="./images/bitmap-nikosi.svg" class="bitmap-img">
+          <p class="card-number">04</p>
+          <div class="lower-part">
+            <h2 class="copy-category">Tasty</h2>
+            <p class="copy-caption">Copy said could convince her and so it didn’t take long.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- swiper -->
+
       <div class="swiper2_box">
         <div class="swiper mySwiper1">
           <div class="swiper-wrapper">
             <div id="swiper_slide1" class="swiper-slide swiper_slide_bold">
               <div class="swiper_box">
-                <img class="description_img" src="./images/fresh.svg" />
                 <div class="description_box_contant">
-                  <h3>Fresh</h3>
-                  <p class="description_box_p">
-                    Nothing the copy said could convince
-                    <br class="br_desktop" />
-                    her and so it <br class="br_mobile" />
-                    didn’t take long.
-                  </p>
+                  <img src="./images/bitmap-nikosi.svg" class="nikos-swiper-img">
+                  <p class="card-number">01</p>
+                  <h2 class="copy-category">Contact</h2>
+                  <p class="copy-caption">Nothing the copy said could convince her and so it didn’t take long.</p>
                 </div>
               </div>
             </div>
             <div id="swiper_slide2" class="swiper-slide swiper_slide_bold">
               <div class="swiper_box">
-                <img class="description_img" src="./images/natural.svg" />
                 <div class="description_box_contant">
-                  <h3>Natural</h3>
-                  <p class="description_box_p">
-                    Copy Writers ambushed her, made her
-                    <br class="br_desktop" />
-                    drunk with <br class="br_mobile" />
-                    Longe and Parole.
-                  </p>
+                  <img src="./images/bitmap-nikosi.svg" class="nikos-swiper-img">
+                  <p class="card-number">02</p>
+                  <h2 class="copy-category">Baking</h2>
+                  <p class="copy-caption">The copy said could convince her and so it didn’t take long.</p>
                 </div>
               </div>
             </div>
             <div id="swiper_slide3" class="swiper-slide swiper_slide_bold">
               <div class="swiper_box">
-                <img class="description_img" src="./images/tasty.svg" />
                 <div class="description_box_contant">
-                  <h3>Tasty</h3>
-                  <p class="description_box_p">
-                    And if she hasn’t been <br class="br_mobile" />
-                    rewritten, then
-                    <br class="br_desktop" />
-                    they <br class="br_tablet" />
-                    are <br class="br_mobile" />
-                    still using her.
-                  </p>
+                  <img src="./images/bitmap-nikosi.svg" class="nikos-swiper-img">
+                  <p class="card-number">03</p>
+                  <h2 class="copy-category">Delivery</h2>
+                  <p class="copy-caption">Nothing the copy said could convince her and so it didn’t take.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="description_main_box">
-        <div id="description_box1" class="description_box">
-          <img
-            id="description_box_img1"
-            class="description_box_img"
-            src="./images/Bitmapbox.svg"
-            alt=""
-          />
-          <img class="description_img" src="./images/fresh.svg" />
-          <div class="description_box_contant">
-            <h3>Fresh</h3>
-            <p class="description_box_p">
-              Nothing the copy said could convince <br class="br_desktop" />
-              her and so it <br class="br_mobile" />
-              didn’t take long.
-            </p>
+
+
+      <!-- swiper -->
+
+
+      <div class="title-container-third">
+        <p class="our-recepies">Our Recipes</p>
+        <h class="explore-sweets">Explore Sweet & Delicious Recipes</h1>
+      </div>
+      <div class="third-container">
+        <div class="second-big-div">
+          <div class="second-big-div-image"></div>
+          <div class="second-big-div-content">
+            <p class="category">Bakery</p>
+            <h1 class="titlee">Delicious Bread</h1>
+            <div class="caption-and-time">
+              <p class="caption">Flows by their place and supplies it with the necessary regelialia.</p>
+              <div class="time-div">
+                <img src="./images/Shape (1).svg">
+                <p class="sec-big-div-time">5 min</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div id="description_box2" class="description_box">
-          <img
-            id="description_box_img2"
-            class="description_box_img"
-            src="./images/Bitmapbox.svg"
-            alt=""
-          />
-          <img class="description_img" src="./images/natural.svg" />
-          <div class="description_box_contant">
-            <h3>Natural</h3>
-            <p class="description_box_p">
-              Copy Writers ambushed her, made her <br class="br_desktop" />
-              drunk with Longe and Parole.
-            </p>
+        <div class="cards-middle">
+          <div class="smaller-card">
+            <div class="smaller-image"></div>
+            <div class="smaller-card-content">
+              <div class="category-and-time">
+                <p class="smaller-card-category">Bakery</p>
+                <div class="smaller-time-div">
+                  <img src="./images/Shape (1).svg">
+                  <p class="smaller-card-time">10 min</p>
+                </div>
+              </div>
+              <p class="smaller-card-name">Malted wheat flake bread</p>
+            </div>
+          </div>
+          <div class="smaller-card">
+            <div class="smaller-image1"></div>
+            <div class="smaller-card-content">
+              <div class="category-and-time">
+                <p class="smaller-card-category">Bakery</p>
+                <div class="smaller-time-div">
+                  <img src="./images/Shape (1).svg">
+                  <p class="smaller-card-time">5 min</p>
+                </div>
+              </div>
+              <p class="smaller-card-name">Peanut butter and chocolate cake</p>
+            </div>
           </div>
         </div>
-        <div id="description_box3" class="description_box">
-          <img
-            id="description_box_img3"
-            class="description_box_img"
-            src="./images/Bitmapbox.svg"
-            alt=""
-          />
-          <img class="description_img" src="./images/tasty.svg" />
-          <div class="description_box_contant">
-            <h3>Tasty</h3>
-            <p class="description_box_p">
-              And if she hasn’t been rewritten, then <br class="br_desktop" />
-              they <br class="br_tablet" />
-              are still using her.
-            </p>
+        <div class="cards-right">
+          <div class="smaller-card">
+            <div class="smaller-image2"></div>
+            <div class="smaller-card-content">
+              <div class="category-and-time">
+                <p class="smaller-card-category">Bakery</p>
+                <div class="smaller-time-div">
+                  <img src="./images/Shape (1).svg">
+                  <p class="smaller-card-time">7 min</p>
+                </div>
+              </div>
+              <p class="smaller-card-name">Biscoff cake with lotus biscuits</p>
+            </div>
+          </div>
+          <div class="smaller-card">
+            <div class="smaller-image3"></div>
+            <div class="smaller-card-content">
+              <div class="category-and-time">
+                <p class="smaller-card-category">Bakery</p>
+                <div class="smaller-time-div">
+                  <img src="./images/Shape (1).svg">
+                  <p class="smaller-card-time">15 min</p>
+                </div>
+              </div>
+              <p class="smaller-card-name">Malted wheat flake bread</p>
+            </div>
+          </div>
+        </div>
+        <div class="third-container-hidden-div">
+          <div class="smaller-card">
+            <div class="smaller-image4"></div>
+            <div class="smaller-card-content">
+              <div class="category-and-time">
+                <p class="smaller-card-category">Bakery</p>
+                <div class="smaller-time-div">
+                  <img src="./images/Shape (1).svg">
+                  <p class="smaller-card-time">25 min</p>
+                </div>
+              </div>
+              <p class="smaller-card-name">Blueberry Cake With Fresh Blueberrys</p>
+            </div>
+          </div>
+          <div class="smaller-card">
+            <div class="smaller-image5"></div>
+            <div class="smaller-card-content">
+              <div class="category-and-time">
+                <p class="smaller-card-category">Bakery</p>
+                <div class="smaller-time-div">
+                  <img src="./images/Shape (1).svg">
+                  <p class="smaller-card-time">10 min</p>
+                </div>
+              </div>
+              <p class="smaller-card-name">Fresh Burger Buns</p>
+            </div>
+          </div>
+          <div class="smaller-card">
+            <div class="smaller-image6"></div>
+            <div class="smaller-card-content">
+              <div class="category-and-time">
+                <p class="smaller-card-category">Bakery</p>
+                <div class="smaller-time-div">
+                  <img src="./images/Shape (1).svg">
+                  <p class="smaller-card-time">35 min</p>
+                </div>
+              </div>
+              <p class="smaller-card-name">Berry Cake With Fresh Berrys</p>
+            </div>
+          </div>
+          <div class="smaller-card">
+            <div class="smaller-image7"></div>
+            <div class="smaller-card-content">
+              <div class="category-and-time">
+                <p class="smaller-card-category">Bakery</p>
+                <div class="smaller-time-div">
+                  <img src="./images/Shape (1).svg">
+                  <p class="smaller-card-time">3 min</p>
+                </div>
+              </div>
+              <p class="smaller-card-name">Delicious Yiyliyos</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="video_container">
-        <div class="video_container_main_box">
-          <img class="video_shape_1" src="./images/Shape4.svg" alt="" />
-          <img class="video_shape_2" src="./images/Shape5.svg" alt="" />
-          <div class="video_container_contant">
-            <div id="donate_img_box" class="donate_img_box">
-              <img
-                id="donate_img"
-                class="appare_img"
-                src="./images/donateresult.png"
-                alt=""
-              />
-            </div>
-            <div id="donate_img_box2">
-              <img
-                id="donate_img2"
-                class="appare_img"
-                src="./images/strawbery.png"
-                alt=""
-              />
-            </div>
-            <div id="donate_img_box3">
-              <img
-                id="donate_img3"
-                class="appare_img"
-                src="./images/cakes.png"
-                alt=""
-              />
-            </div>
-            <div id="donate_img_box4">
-              <img
-                id="donate_img4"
-                class="appare_img"
-                src="./images/cakes2.png"
-                alt=""
-              />
-            </div>
-            <div class="play_button_box">
-              <img class="video_img" src="./images/Combined Shapevideo.svg" />
-              <button id="play_btn" class="play_btn">
-                <img src="./images/play.svg" alt="" />
-              </button>
-            </div>
-            <div class="video_about">
-              <p class="header_contant_about_p">Our Video</p>
-              <h4>
-                Story Behind <br />
-                Every Piece
-              </h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer></footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./script.js"></script>
-  </body>
+      <button id="show-more-second">Show More</button>
+    </div>
+  </main>
+  <footer></footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>
