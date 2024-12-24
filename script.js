@@ -1,9 +1,43 @@
-var swiper = new Swiper(".mySwiper", {
-  direction: "vertical",
-  pagination: {
-    clickable: true,
-  },
+var swiper3 = new Swiper(".mySwiper5", {
+  watchSlidesProgress: true,
+  slidesPerView: 3,
   loop: true,
+  direction: "horizontal",
+  centeredSlides: true,
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const swiper1 = new Swiper(".mySwiper", {
+    direction: "vertical",
+    pagination: {
+      clickable: true,
+    },
+    loop: true,
+  });
+
+  const swiper2 = new Swiper(".mySwiper4", {
+    direction: "vertical",
+    pagination: {
+      clickable: true,
+    },
+    loop: true,
+  });
+  const next1 = document.getElementById("next");
+  const previous1 = document.getElementById("previous");
+  next1.addEventListener("click", () => {
+    swiper1.slideNext();
+  });
+  previous1.addEventListener("click", () => {
+    swiper1.slidePrev();
+  });
+
+  const next2 = document.getElementById("next_2");
+  const previous2 = document.getElementById("previous_2");
+  next2.addEventListener("click", () => {
+    swiper2.slideNext();
+  });
+  previous2.addEventListener("click", () => {
+    swiper2.slidePrev();
+  });
 });
 var swiper2 = new Swiper(".mySwiper2", {
   direction: "vertical",
@@ -38,22 +72,6 @@ function UpdateSlideColors() {
   }
 }
 
-let next = document.getElementById("next");
-next.addEventListener("click", () => {
-  swiper.slideNext();
-});
-let previous = document.getElementById("previous");
-previous.addEventListener("click", () => {
-  swiper.slidePrev();
-});
-let next2 = document.getElementById("next2");
-next2.addEventListener("click", () => {
-  swiper2.slideNext();
-});
-let previous2 = document.getElementById("previous2");
-previous2.addEventListener("click", () => {
-  swiper2.slidePrev();
-});
 let description_box1 = document.getElementById("description_box1");
 let description_box2 = document.getElementById("description_box2");
 let description_box3 = document.getElementById("description_box3");
@@ -282,6 +300,96 @@ async function GetProducts() {
   }
 }
 GetProducts();
+
+let bottom_swiper_p_heading = document.getElementById(
+  "bottom_swiper_p_heading"
+);
+let bottom_swiper_p_about = document.getElementById("bottom_swiper_p_about");
+let bottom_swiper_p_bottom1 = document.getElementById(
+  "bottom_swiper_p_bottom1"
+);
+let bottom_swiper_p_bottom2 = document.getElementById(
+  "bottom_swiper_p_bottom2"
+);
+let bottom_swiper_p_bottom3 = document.getElementById(
+  "bottom_swiper_p_bottom3"
+);
+let bottom_swiper_p_heading2 = document.getElementById(
+  "bottom_swiper_p_heading2"
+);
+let bottom_swiper_p_about2 = document.getElementById("bottom_swiper_p_about2");
+let bottom_swiper_p_bottom1_2 = document.getElementById(
+  "bottom_swiper_p_bottom1_2"
+);
+let bottom_swiper_p_bottom2_2 = document.getElementById(
+  "bottom_swiper_p_bottom2_2"
+);
+let bottom_swiper_p_bottom3_2 = document.getElementById(
+  "bottom_swiper_p_bottom3_2"
+);
+let bottom_swiper_p_heading3 = document.getElementById(
+  "bottom_swiper_p_heading3"
+);
+let bottom_swiper_p_about3 = document.getElementById("bottom_swiper_p_about3");
+let bottom_swiper_p_bottom1_3 = document.getElementById(
+  "bottom_swiper_p_bottom1_3"
+);
+let bottom_swiper_p_bottom2_3 = document.getElementById(
+  "bottom_swiper_p_bottom2_3"
+);
+let bottom_swiper_p_bottom3_3 = document.getElementById(
+  "bottom_swiper_p_bottom3_3"
+);
+let bottom_swiper_p_heading4 = document.getElementById(
+  "bottom_swiper_p_heading4"
+);
+let bottom_swiper_p_about4 = document.getElementById("bottom_swiper_p_about4");
+let bottom_swiper_p_bottom1_4 = document.getElementById(
+  "bottom_swiper_p_bottom1_4"
+);
+let bottom_swiper_p_bottom2_4 = document.getElementById(
+  "bottom_swiper_p_bottom2_4"
+);
+let bottom_swiper_p_bottom3_4 = document.getElementById(
+  "bottom_swiper_p_bottom3_4"
+);
+async function GetData() {
+  try {
+    let Data = await fetch("https://fakestoreapi.com/products");
+    let Products = await Data.json();
+    for (let index = 4; index < 8; index++) {
+      const product = Products[index];
+      if (index === 4) {
+        bottom_swiper_p_heading.textContent = product.title;
+        bottom_swiper_p_about.textContent = product.description;
+        bottom_swiper_p_bottom1.textContent = product.rating.rate;
+        bottom_swiper_p_bottom2.textContent = product.price;
+        bottom_swiper_p_bottom3.textContent = product.category;
+      } else if (index === 5) {
+        bottom_swiper_p_heading2.textContent = product.title;
+        bottom_swiper_p_about2.textContent = product.description;
+        bottom_swiper_p_bottom1_2.textContent = product.rating.rate;
+        bottom_swiper_p_bottom2_2.textContent = product.price;
+        bottom_swiper_p_bottom3_2.textContent = product.category;
+      } else if (index === 6) {
+        bottom_swiper_p_heading3.textContent = product.title;
+        bottom_swiper_p_about3.textContent = product.description;
+        bottom_swiper_p_bottom1_3.textContent = product.rating.rate;
+        bottom_swiper_p_bottom2_3.textContent = product.price;
+        bottom_swiper_p_bottom3_3.textContent = product.category;
+      } else if (index === 7) {
+        bottom_swiper_p_heading4.textContent = product.title;
+        bottom_swiper_p_about4.textContent = product.description;
+        bottom_swiper_p_bottom1_4.textContent = product.rating.rate;
+        bottom_swiper_p_bottom2_4.textContent = product.price;
+        bottom_swiper_p_bottom3_4.textContent = product.category;
+      }
+    }
+  } catch (error) {
+    console.log("error");
+  }
+}
+GetData();
 let donate_img_box = document.getElementById("donate_img_box");
 let donate_img = document.getElementById("donate_img");
 donate_img_box.addEventListener("mouseenter", () => {
