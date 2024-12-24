@@ -5,7 +5,13 @@ var swiper = new Swiper(".mySwiper", {
   },
   loop: true,
 });
-
+var swiper2 = new Swiper(".mySwiper2", {
+  direction: "vertical",
+  pagination: {
+    clickable: true,
+  },
+  loop: true,
+});
 var swiper1 = new Swiper(".mySwiper1", {
   effect: "cards",
   grabCursor: true,
@@ -40,7 +46,14 @@ let previous = document.getElementById("previous");
 previous.addEventListener("click", () => {
   swiper.slidePrev();
 });
-
+let next2 = document.getElementById("next2");
+next2.addEventListener("click", () => {
+  swiper2.slideNext();
+});
+let previous2 = document.getElementById("previous2");
+previous2.addEventListener("click", () => {
+  swiper2.slidePrev();
+});
 let description_box1 = document.getElementById("description_box1");
 let description_box2 = document.getElementById("description_box2");
 let description_box3 = document.getElementById("description_box3");
@@ -213,7 +226,6 @@ async function GetProducts() {
   try {
     let Data = await fetch("https://fakestoreapi.com/products");
     let Products = await Data.json();
-    console.log(Products);
     for (let index = 0; index < 4; index++) {
       const product = Products[index];
       if (index === 0) {
@@ -298,7 +310,7 @@ showMore.addEventListener("click", () => {
     showMore.textContent = "Show Less";
   } else {
     hiddenDivFirst.style.display = "none";
-    showMore.textContent = "Show More"
+    showMore.textContent = "Show More";
     clickCount = 0;
   }
 });
@@ -309,15 +321,14 @@ showMoreSecond.addEventListener("click", () => {
   clickCountSecond++;
   if (clickCountSecond % 2 === 1) {
     hiddenDivThird.style.display = "flex";
-    showMoreSecond.textContent = "Show Less"
+    showMoreSecond.textContent = "Show Less";
   } else {
     hiddenDivThird.style.display = "none";
-    showMoreSecond.textContent = "Show More"
+    showMoreSecond.textContent = "Show More";
     clickCountSecond = 0;
   }
-
-})
-copys.forEach(copy => {
+});
+copys.forEach((copy) => {
   copy.addEventListener("mouseenter", () => {
     let bitmapImg = copy.querySelector(".bitmap-img");
     if (bitmapImg) {
