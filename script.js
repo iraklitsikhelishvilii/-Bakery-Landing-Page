@@ -113,14 +113,24 @@ play_btn.addEventListener("click", () => {
   });
 });
 
-if (sessionStorage.getItem("animation played") === "true") {
-  body.style.overflowY = "auto";
-  header.style.height = "auto";
-  header_arrow_box.style.paddingTop = "50px";
-  header_contant.style.paddingTop = "185px";
-} else {
-  body.style.overflowY = "hidden";
+function updateStyles() {
+  if (sessionStorage.getItem("animation played") === "true") {
+    body.style.overflowY = "auto";
+    header.style.height = "auto";
+    header_arrow_box.style.paddingTop = "50px";
+    header_contant.style.paddingTop = "185px";
+  } else if (window.innerWidth <= 1100) {
+    body.style.overflowY = "auto";
+    header.style.height = "auto";
+    header_arrow_box.style.paddingTop = "50px";
+    header_contant.style.paddingTop = "185px";
+  } else {
+    body.style.overflowY = "hidden";
+  }
 }
+
+updateStyles();
+
 header_arrow_box.addEventListener("click", () => {
   window.scrollBy({
     top: 1000,
@@ -128,10 +138,12 @@ header_arrow_box.addEventListener("click", () => {
   });
 
   sessionStorage.setItem("animation played", "true");
+
   body.style.overflowY = "auto";
   header.style.height = "auto";
   header_arrow_box.style.paddingTop = "50px";
   header_contant.style.paddingTop = "185px";
+  updateStyles();
 });
 
 let header_btn = document.getElementById("header_btn");
