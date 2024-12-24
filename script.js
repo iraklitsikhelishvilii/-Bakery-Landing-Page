@@ -1,3 +1,12 @@
+window.onload = function () {
+  let loading = document.createElement("div");
+  loading.classList.add("loading_div");
+  document.body.appendChild(loading);
+  setTimeout(() => {
+    document.body.removeChild(loading);
+  }, 3000);
+};
+
 var swiper = new Swiper(".mySwiper", {
   direction: "vertical",
   pagination: {
@@ -100,17 +109,19 @@ play_btn.addEventListener("click", () => {
   });
 });
 
+let section = document.getElementById("section");
+let header = document.getElementById("header");
+sessionStorage.getItem("animation played");
+
 header_arrow_box.addEventListener("click", () => {
   window.scrollBy({
     top: 1000,
     behavior: "smooth",
   });
-  header.style.height = "auto";
-  body.style.overflowY = "auto";
-  if (window.innerWidth <= 650) {
-    header_arrow_box.style.paddingTop = "25px";
-    header_contant.style.paddingTop = "25px";
-  } else {
+  sessionStorage.setItem("animation played", "true");
+  if (sessionStorage.getItem("animation played") === "true") {
+    body.style.overflowY = "auto";
+    header.style.height = "auto";
     header_arrow_box.style.paddingTop = "50px";
     header_contant.style.paddingTop = "185px";
   }
@@ -140,12 +151,17 @@ p3.target = "_blank";
 let contact_btn = document.createElement("button");
 contact_btn.classList.add("contact_btn");
 contact_btn.textContent = "Contact";
+let menu_button_div_line_1 = document.getElementById("menu_button_div_line_1");
+let menu_button_div_line_2 = document.getElementById("menu_button_div_line_2");
+let menu_button_div = document.getElementById("menu_button_div");
 menu_button.addEventListener("click", () => {
   burger_menu.classList.toggle("burger_menu_extended");
 
   if (burger_menu.classList.contains("burger_menu_extended")) {
     burger_menu.style.height = "240px";
-    menu_button.style.transform = "rotate(360deg)";
+    menu_button_div_line_1.style.transform = "rotate(-45deg)";
+    menu_button_div_line_2.style.transform = "rotate(45deg)";
+    menu_button_div.style.gap = "0px";
     setTimeout(() => {
       burger_menu.appendChild(p1);
       burger_menu.appendChild(p2);
@@ -153,7 +169,9 @@ menu_button.addEventListener("click", () => {
       burger_menu.appendChild(contact_btn);
     }, 1000);
   } else {
-    menu_button.style.transform = "rotate(-360deg)";
+    menu_button_div_line_1.style.transform = "rotate(0deg)";
+    menu_button_div_line_2.style.transform = "rotate(0deg)";
+    menu_button_div.style.gap = "6px";
     burger_menu.style.height = "0px";
     burger_menu.removeChild(p1);
     burger_menu.removeChild(p2);
@@ -213,7 +231,6 @@ async function GetProducts() {
   try {
     let Data = await fetch("https://fakestoreapi.com/products");
     let Products = await Data.json();
-    console.log(Products);
     for (let index = 0; index < 4; index++) {
       const product = Products[index];
       if (index === 0) {
@@ -281,3 +298,9 @@ donate_img_box4.addEventListener("mouseenter", () => {
 donate_img_box4.addEventListener("mouseleave", () => {
   donate_img4.style.opacity = "0";
 });
+// else {
+//   body.style.overflow = "hidden";
+//   header.style.height = "100vh";
+//   header_arrow_box.style.paddingTop = "25px";
+//   header_contant.style.paddingTop = "25px";
+// }
