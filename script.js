@@ -153,12 +153,16 @@ p3.target = "_blank";
 let contact_btn = document.createElement("button");
 contact_btn.classList.add("contact_btn");
 contact_btn.textContent = "Contact";
+
+let burger_menu_line1 = document.getElementById("burger_menu_line1");
+let burger_menu_line2 = document.getElementById("burger_menu_line2");
 menu_button.addEventListener("click", () => {
   burger_menu.classList.toggle("burger_menu_extended");
-
   if (burger_menu.classList.contains("burger_menu_extended")) {
     burger_menu.style.height = "240px";
-    menu_button.style.transform = "rotate(360deg)";
+    burger_menu_line1.style.transform = "rotate(-45deg)";
+    burger_menu_line2.style.transform = "rotate(45deg)";
+    menu_button.style.gap = "0px";
     setTimeout(() => {
       burger_menu.appendChild(p1);
       burger_menu.appendChild(p2);
@@ -166,7 +170,9 @@ menu_button.addEventListener("click", () => {
       burger_menu.appendChild(contact_btn);
     }, 1000);
   } else {
-    menu_button.style.transform = "rotate(-360deg)";
+    burger_menu_line1.style.transform = "rotate(0deg)";
+    burger_menu_line2.style.transform = "rotate(0deg)";
+    menu_button.style.gap = "5px";
     burger_menu.style.height = "0px";
     burger_menu.removeChild(p1);
     burger_menu.removeChild(p2);
