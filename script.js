@@ -113,20 +113,25 @@ play_btn.addEventListener("click", () => {
   });
 });
 
+if (sessionStorage.getItem("animation played") === "true") {
+  body.style.overflowY = "auto";
+  header.style.height = "auto";
+  header_arrow_box.style.paddingTop = "50px";
+  header_contant.style.paddingTop = "185px";
+} else {
+  body.style.overflowY = "hidden";
+}
 header_arrow_box.addEventListener("click", () => {
   window.scrollBy({
     top: 1000,
     behavior: "smooth",
   });
-  header.style.height = "auto";
+
+  sessionStorage.setItem("animation played", "true");
   body.style.overflowY = "auto";
-  if (window.innerWidth <= 650) {
-    header_arrow_box.style.paddingTop = "25px";
-    header_contant.style.paddingTop = "25px";
-  } else {
-    header_arrow_box.style.paddingTop = "50px";
-    header_contant.style.paddingTop = "185px";
-  }
+  header.style.height = "auto";
+  header_arrow_box.style.paddingTop = "50px";
+  header_contant.style.paddingTop = "185px";
 });
 
 let header_btn = document.getElementById("header_btn");
@@ -353,4 +358,12 @@ copys.forEach((copy) => {
     copy.style.height = "384px";
     copy.style.backgroundColor = "white";
   });
+});
+let Contact_btn_2 = document.getElementById("Contact_btn_2");
+Contact_btn_2.addEventListener("click", () => {
+  window.location.href = "tel:+995558900800";
+});
+let Contact_btn_2_2 = document.getElementById("Contact_btn_2_2");
+Contact_btn_2_2.addEventListener("click", () => {
+  window.location.href = "tel:+995558900800";
 });
