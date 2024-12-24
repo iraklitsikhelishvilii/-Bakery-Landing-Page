@@ -1823,7 +1823,18 @@ footer {
     text-align: center;
   }
   .bottom_swiper {
-    display: none;
+    max-width: 850px;
+  }
+  .bottom_swiper_top_box {
+    gap: 15px;
+  }
+  .bottom_slider_p2 {
+    font-size: 12px;
+    line-height: 25px;
+  }
+  .bottom_slider_p {
+    font-size: 18px;
+    line-height: 25px;
   }
 }
 
