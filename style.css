@@ -1044,6 +1044,7 @@ h4 {
   gap: 35%;
   justify-content: center;
   position: relative;
+  transition: 0.7s ease-in-out;
 }
 
 .bitmap-img {
