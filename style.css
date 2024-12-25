@@ -982,8 +982,11 @@ h4 {
 
 .second-container {
   background-image: url("./images/second-container.svg");
+  background-size: 1485px;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
-  max-width: 1440px;
+  background-color: #171b1b;
   display: flex;
   flex-direction: column;
   align-items: center;
