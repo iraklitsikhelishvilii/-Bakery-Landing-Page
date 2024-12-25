@@ -5,6 +5,7 @@ var swiper3 = new Swiper(".mySwiper5", {
   direction: "horizontal",
   centeredSlides: true,
 });
+
 document.addEventListener("DOMContentLoaded", () => {
   const swiper1 = new Swiper(".mySwiper", {
     direction: "vertical",
@@ -46,31 +47,15 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
   loop: true,
 });
+
 var swiper1 = new Swiper(".mySwiper1", {
   effect: "cards",
   grabCursor: true,
-  on: {
-    slideChange: function () {
-      UpdateSlideColors();
-    },
-  },
+  centeredSlides: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  watchSlidesProgress: true,
 });
-
-let swiper_slide_bold = document.getElementsByClassName("swiper_slide_bold");
-
-function UpdateSlideColors() {
-  for (let i = 0; i < swiper_slide_bold.length; i++) {
-    let zIndex = window.getComputedStyle(swiper_slide_bold[i]).zIndex;
-
-    if (zIndex === "3") {
-      swiper_slide_bold[i].style.backgroundColor = "#9EAD8D";
-      swiper_slide_bold[i].style.height = "416px";
-    } else {
-      swiper_slide_bold[i].style.backgroundColor = "white";
-      swiper_slide_bold[i].style.height = "384px";
-    }
-  }
-}
 
 let description_box1 = document.getElementById("description_box1");
 let description_box2 = document.getElementById("description_box2");
@@ -176,34 +161,36 @@ p1.textContent = "About";
 p1.classList.add("header_p", "burger_menu_p");
 p1.href = "https://en.wikipedia.org/wiki/Bakery";
 p1.target = "_blank";
+
 let p2 = document.createElement("a");
 p2.textContent = "Products";
 p2.classList.add("header_p", "burger_menu_p");
 p2.href = "./menu.page/menu.html";
+
 let p3 = document.createElement("a");
 p3.textContent = "Recipes";
 p3.classList.add("header_p", "burger_menu_p");
 p3.href = "https://sallysbakingaddiction.com/";
 p3.target = "_blank";
+
 let contact_btn = document.createElement("button");
 contact_btn.classList.add("contact_btn");
 contact_btn.textContent = "Contact";
 
 let burger_menu_line1 = document.getElementById("burger_menu_line1");
 let burger_menu_line2 = document.getElementById("burger_menu_line2");
+
 menu_button.addEventListener("click", () => {
   burger_menu.classList.toggle("burger_menu_extended");
   if (burger_menu.classList.contains("burger_menu_extended")) {
     burger_menu.style.height = "240px";
     burger_menu_line1.style.transform = "rotate(-45deg)";
-    burger_menu_line2.style.transform = "rotate(45deg)";
+    burger_menu_line2.style.transform = "rotate(45deg) translateY(-2px)";
     menu_button.style.gap = "0px";
-    setTimeout(() => {
-      burger_menu.appendChild(p1);
-      burger_menu.appendChild(p2);
-      burger_menu.appendChild(p3);
-      burger_menu.appendChild(contact_btn);
-    }, 1000);
+    burger_menu.appendChild(p1);
+    burger_menu.appendChild(p2);
+    burger_menu.appendChild(p3);
+    burger_menu.appendChild(contact_btn);
   } else {
     burger_menu_line1.style.transform = "rotate(0deg)";
     burger_menu_line2.style.transform = "rotate(0deg)";
